@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2697FBE820A1DD6C00829010 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2697FBE720A1DD6C00829010 /* Card.swift */; };
+		2697FBEC20A1DFC500829010 /* Rank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2697FBEB20A1DFC500829010 /* Rank.swift */; };
+		2697FBEE20A1DFDD00829010 /* Suit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2697FBED20A1DFDD00829010 /* Suit.swift */; };
+		2697FBF120A1E0EE00829010 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2697FBF020A1E0EE00829010 /* Deck.swift */; };
+		2697FBF420A1E19C00829010 /* Fisher-Yates_Shuffle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2697FBF320A1E19C00829010 /* Fisher-Yates_Shuffle.swift */; };
+		2697FBF620A1E1CE00829010 /* random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2697FBF520A1E1CE00829010 /* random.swift */; };
 		26BBA1DF2057CF49005F4ACF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BBA1DE2057CF49005F4ACF /* AppDelegate.swift */; };
 		26BBA1E12057CF49005F4ACF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BBA1E02057CF49005F4ACF /* ViewController.swift */; };
 		26BBA1E42057CF49005F4ACF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26BBA1E22057CF49005F4ACF /* Main.storyboard */; };
@@ -15,6 +21,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2697FBE720A1DD6C00829010 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		2697FBEB20A1DFC500829010 /* Rank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rank.swift; sourceTree = "<group>"; };
+		2697FBED20A1DFDD00829010 /* Suit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suit.swift; sourceTree = "<group>"; };
+		2697FBF020A1E0EE00829010 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		2697FBF320A1E19C00829010 /* Fisher-Yates_Shuffle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fisher-Yates_Shuffle.swift"; sourceTree = "<group>"; };
+		2697FBF520A1E1CE00829010 /* random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = random.swift; sourceTree = "<group>"; };
 		26BBA1DB2057CF49005F4ACF /* Durak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Durak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26BBA1DE2057CF49005F4ACF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26BBA1E02057CF49005F4ACF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +47,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2697FBEF20A1E01E00829010 /* Deck */ = {
+			isa = PBXGroup;
+			children = (
+				2697FBF020A1E0EE00829010 /* Deck.swift */,
+				2697FBEB20A1DFC500829010 /* Rank.swift */,
+				2697FBED20A1DFDD00829010 /* Suit.swift */,
+				2697FBE720A1DD6C00829010 /* Card.swift */,
+			);
+			path = Deck;
+			sourceTree = "<group>";
+		};
+		2697FBF220A1E18500829010 /* Deal */ = {
+			isa = PBXGroup;
+			children = (
+				2697FBF320A1E19C00829010 /* Fisher-Yates_Shuffle.swift */,
+				2697FBF520A1E1CE00829010 /* random.swift */,
+			);
+			path = Deal;
+			sourceTree = "<group>";
+		};
 		26BBA1D22057CF49005F4ACF = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +86,8 @@
 		26BBA1DD2057CF49005F4ACF /* Durak */ = {
 			isa = PBXGroup;
 			children = (
+				2697FBF220A1E18500829010 /* Deal */,
+				2697FBEF20A1E01E00829010 /* Deck */,
 				26BBA1DE2057CF49005F4ACF /* AppDelegate.swift */,
 				26BBA1E02057CF49005F4ACF /* ViewController.swift */,
 				26BBA1E22057CF49005F4ACF /* Main.storyboard */,
@@ -136,8 +170,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2697FBF120A1E0EE00829010 /* Deck.swift in Sources */,
 				26BBA1E12057CF49005F4ACF /* ViewController.swift in Sources */,
+				2697FBE820A1DD6C00829010 /* Card.swift in Sources */,
+				2697FBEC20A1DFC500829010 /* Rank.swift in Sources */,
+				2697FBF420A1E19C00829010 /* Fisher-Yates_Shuffle.swift in Sources */,
+				2697FBEE20A1DFDD00829010 /* Suit.swift in Sources */,
 				26BBA1DF2057CF49005F4ACF /* AppDelegate.swift in Sources */,
+				2697FBF620A1E1CE00829010 /* random.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
