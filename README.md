@@ -5,5 +5,5 @@ Implementation of a card game for University of Bologna, Mobile Applications Lab
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License.
 
