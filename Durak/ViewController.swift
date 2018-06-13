@@ -10,22 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var touchDeck: UIButton!
+    
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        var deck = Deck.standard52CardDeck();
+        super.viewDidLoad();
+        var myGame:Game = Game();
+        print(myGame.player1Hand);
+        print(myGame.turn);
+        print(myGame.switchTurn());
+        print(myGame.turn);
+    
         
-        var player1Hand = Array<Card?>();
-        var player2Hand = Array<Card?>();
-        deck.shuffle(); // works
-
         
-        for _ in 1 ... 5 {
-            player1Hand.append(deck.deal());
-            player2Hand.append(deck.deal());
-        }
-
-        print(deck.count()); 
-        print(player1Hand);
        
     }
 

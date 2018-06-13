@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		260D918B20A5B0EA005DAB81 /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D918A20A5B0EA005DAB81 /* Hand.swift */; };
+		268088E620BC563200A170E6 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268088E520BC563200A170E6 /* Game.swift */; };
+		2680A47720D16EDE00C07353 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2680A47620D16EDD00C07353 /* Player.swift */; };
 		2697FBE820A1DD6C00829010 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2697FBE720A1DD6C00829010 /* Card.swift */; };
 		2697FBEC20A1DFC500829010 /* Rank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2697FBEB20A1DFC500829010 /* Rank.swift */; };
 		2697FBEE20A1DFDD00829010 /* Suit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2697FBED20A1DFDD00829010 /* Suit.swift */; };
@@ -21,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		260D918A20A5B0EA005DAB81 /* Hand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
+		268088E520BC563200A170E6 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		2680A47620D16EDD00C07353 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		2697FBE720A1DD6C00829010 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		2697FBEB20A1DFC500829010 /* Rank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rank.swift; sourceTree = "<group>"; };
 		2697FBED20A1DFDD00829010 /* Suit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suit.swift; sourceTree = "<group>"; };
@@ -90,7 +96,10 @@
 				2697FBEF20A1E01E00829010 /* Deck */,
 				26BBA1DE2057CF49005F4ACF /* AppDelegate.swift */,
 				26BBA1E02057CF49005F4ACF /* ViewController.swift */,
+				268088E520BC563200A170E6 /* Game.swift */,
+				2680A47620D16EDD00C07353 /* Player.swift */,
 				26BBA1E22057CF49005F4ACF /* Main.storyboard */,
+				260D918A20A5B0EA005DAB81 /* Hand.swift */,
 				26BBA1E52057CF49005F4ACF /* Assets.xcassets */,
 				26BBA1E72057CF49005F4ACF /* LaunchScreen.storyboard */,
 				26BBA1EA2057CF49005F4ACF /* Info.plist */,
@@ -170,11 +179,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2680A47720D16EDE00C07353 /* Player.swift in Sources */,
 				2697FBF120A1E0EE00829010 /* Deck.swift in Sources */,
+				268088E620BC563200A170E6 /* Game.swift in Sources */,
 				26BBA1E12057CF49005F4ACF /* ViewController.swift in Sources */,
 				2697FBE820A1DD6C00829010 /* Card.swift in Sources */,
 				2697FBEC20A1DFC500829010 /* Rank.swift in Sources */,
 				2697FBF420A1E19C00829010 /* Fisher-Yates_Shuffle.swift in Sources */,
+				260D918B20A5B0EA005DAB81 /* Hand.swift in Sources */,
 				2697FBEE20A1DFDD00829010 /* Suit.swift in Sources */,
 				26BBA1DF2057CF49005F4ACF /* AppDelegate.swift in Sources */,
 				2697FBF620A1E1CE00829010 /* random.swift in Sources */,

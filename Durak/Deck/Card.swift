@@ -6,15 +6,25 @@
  See http://swift.org/CONTRIBUTORS.txt for Swift project authors
  */
 
+import UIKit
 
-
-public struct Card {
+public struct Card{
+    
+    internal var backImage : UIImage
+    internal var isFaceUp: Bool
+    
     let rank: Rank
     let suit: Suit
+    
+  
+    
+    
     
     public init(rank: Rank, suit: Suit) {
         self.rank = rank
         self.suit = suit
+        backImage = UIImage(named: "cardback")!
+        isFaceUp = false
     }
 }
 
@@ -24,6 +34,7 @@ extension Card: Equatable {
         return lhs.rank == rhs.rank && lhs.suit == rhs.suit
     }
 }
+
 
 // MARK: - Comparable
 extension Card: Comparable {
