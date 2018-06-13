@@ -13,18 +13,18 @@ public struct Player {
     * Player has a hand but also
     * has the functionality of making moves
     **/
-    private var hand:Array<Card?>;
+    public var hand:Array<Card>;
     public var isAttacking:Bool;
     
     init(){
-        hand = Array<Card?>();
+        hand = Array<Card>();
         isAttacking = false;
         
     }
     public func numCards() -> Int{
         return hand.count;
     }
-    public mutating func collectCard(card:Card?){
+    public mutating func collectCard(card:Card){
         hand.append(card);
     }
     
@@ -33,12 +33,22 @@ public struct Player {
         // the game to check what card is on the deck
         if(Game.isLegal(card: card, isAttacking: self.isAttacking)){
             
+            Game.updateBoard(card: card, isAttacking: self.isAttacking);
+            // remove card from this Player's deck
+            if let index = self.hand.index(of: card){
+                self.hand.remove(at: index);
+            }
+            
         }
         else{
             // display error alert
         }
         
     }
+    public func printCards(){
+        print(self.hand);
+    }
+  
 
     
     

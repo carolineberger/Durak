@@ -15,11 +15,18 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad();
-        var myGame:Game = Game();
-        print(myGame.player1Hand);
-        print(myGame.turn);
-        print(myGame.switchTurn());
-        print(myGame.turn);
+        Game.start();
+        print("Start Print");
+        print(Game.deck);
+        print("Trump" , Game.trump);
+        print("Player 1", Game.player1.numCards());
+        print("Player 1", Game.player1.printCards());
+        print("Player 2", Game.player2.numCards());
+        print("Player 2", Game.player2.printCards());
+        
+        
+       
+
     
         
         
