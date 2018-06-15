@@ -14,9 +14,6 @@ The attacker places a card on the board, the defender can either take the card o
 II. IMPLEMENTATION
 The fundamental architecture of the application is based on the Model-View Controller design pattern (MVC). The Game class acts as the Model, the View Controller class as the Controller and the UIView class as the View. 
 
-
-Figure 1. UML Class Diagram demonstrating the Model-View Controller Design Pattern.
-
 III. TECHNICAL REQUIREMENTS
 Durak was developed in XCode version 9.2 with Swift 4 programming language. The target testing environment is iOS 11.2 running on an iPhone 8 plus. 
 
@@ -28,46 +25,12 @@ B.	The user can draw a card.
 
 Although the functionality is limited, the design of the existing code lends well to extensibility. 
 
-Figure 2. The entry screen for the application. By clicking the start game button, the View is updated to the initial state of the game (Figure 3). 
-
-Figure 3. The initial view of the game. The trump card is shown; the player’s hand is shown.
-
-
-Figure 4. User plays a card by clicking on it from their deck.
-While the functionality is clearly limited, the application’s code is designed and programmed to be extendable and reusable. 
-
 X. CHALLENGES
 The challenges I encountered during this project were implementing a datatype for a Move, validating if a move is legal, and alternating between the user and the computer player. 
 
 Originally, I did not create a class to store information about a Player’s move, instead I passed specific attributes about the player and the card when checking with the Game model if a move is legal. 
 
 While I was creating the UML class diagram, I realized that creating a Move class and a MoveType enumeration improved the encapsulation of the action of a player making a move and checking if the move is legal. 
-
-public class Move{
-    var player:Player
-    var card:Card
-    var type:MoveType
-    
-    init(player:Player, card:Card, type:MoveType){
-        self.player = player
-        self.card = card
-        self.type = type
-    }
-}
-Figure 5. Move Class, encapsulates the player, card, and type of move.
-
-public enum MoveType {
-    case defense
-    case attack
-}
-
-Figure 6. Enum for the Move class.
-
-To validate if a move is legal, I had to logically define the rules of the game in code.
-1.	An attack is always legal.
-2.	In a successful defence, either
-a.	The defender is of higher rank and in the same suit as the attacker or
-b.	The defender is in the trump suit but the attacker is not.
 
 The final problem I encountered of alternation between the user and the player, I was not able to solve with the time permitted. That being said, I have researched into potential solutions which include the use of State Machine design pattern and the Command Design Pattern. 
 
