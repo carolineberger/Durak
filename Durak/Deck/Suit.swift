@@ -7,10 +7,10 @@
  */
 import UIKit
 public enum Suit: String {
-    case spades = "♠️"
-    case hearts = "❤️"
-    case diamonds = "♦️"
-    case clubs = "♣️"
+    case spades = "spades"
+    case hearts = "hearts"
+    case diamonds = "diamonds"
+    case clubs = "clubs"
 }
 
 // MARK: - Comparable
@@ -33,10 +33,10 @@ extension Suit: Comparable {
 extension Suit : CustomStringConvertible {
     public var description: String {
         switch self {
-        case .spades: return "♠︎"
-        case .hearts: return "♡"
-        case .diamonds: return "♢"
-        case .clubs: return "♣︎"
+        case .spades: return "spades"
+        case .hearts: return "hearts"
+        case .diamonds: return "diamonds"
+        case .clubs: return "clubs"
         }
     }
 }

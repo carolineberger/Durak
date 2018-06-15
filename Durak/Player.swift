@@ -8,46 +8,56 @@
 
 import Foundation
 
-public struct Player {
+public class Player {
     /**
     * Player has a hand but also
     * has the functionality of making moves
     **/
     public var hand:Array<Card>;
     public var isAttacking:Bool;
+    public var isDefending:Bool;
+    
     
     init(){
         hand = Array<Card>();
         isAttacking = false;
-        
+        isDefending = false;
+    }
+    public func isDefendSuccessful()-> Bool{
+        if(self.isDefending == true){
+            
+        }
+        return false;
     }
     public func numCards() -> Int{
         return hand.count;
     }
-    public mutating func collectCard(card:Card){
+    public func collectCard(card:Card){
         hand.append(card);
     }
     
-    public mutating func playCard(card:Card){
-        // is legal should communicate with
-        // the game to check what card is on the deck
-        if(Game.isLegal(card: card, isAttacking: self.isAttacking)){
-            
-            Game.updateBoard(card: card, isAttacking: self.isAttacking);
-            // remove card from this Player's deck
-            if let index = self.hand.index(of: card){
-                self.hand.remove(at: index);
-            }
-            
-        }
-        else{
-            // display error alert
-        }
+    fileprivate func removeFromHand(_ card: Card) {
+        // if the move is legal, update the deck of the Player (remove the card)
         
+        if let index = self.hand.index(of: card){
+            self.hand.remove(at: index);
+        }
     }
-    public func printCards(){
-        print(self.hand);
+    
+    public func playCard(card:Card){
+        var type:MoveType = MoveType.defense;
+        if(self.isAttacking){
+            type = MoveType.attack;
+        }
+        let myMove = Move(player:self, card:card, type:type)
+        
+        if(Game.isLegal(move: myMove)){
+            print("Move is legal");
+            removeFromHand(card);
+            Game.updateModel(move: myMove);
+        }
     }
+
   
 
     

@@ -42,14 +42,12 @@ public struct Deck {
 
 }
 
-// MARK: - ExpressibleByArrayLiteral
 extension Deck : ExpressibleByArrayLiteral {
     public init(arrayLiteral elements: Card...) {
         self.init(elements)
     }
 }
 
-// MARK: - Equatable
 extension Deck : Equatable {}
 
 public func ==(lhs: Deck, rhs: Deck) -> Bool {

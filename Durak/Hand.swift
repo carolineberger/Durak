@@ -23,9 +23,6 @@ public struct Hand {
     }
     // show card function
     
-    print(player1Hand);
-    print(player2Hand);
-    
     */
     public init(_ cards: [Card]) {
         self.cards = cards
